@@ -1,2 +1,4 @@
-const Home = () => <p>Home Page</p>
+const Home = () => (
+  <p>Welcome!</p>
+)
 export default Home;
