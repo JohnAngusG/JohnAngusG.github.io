@@ -1,4 +1,5 @@
-const Home = () => (
-  <p>Welcome!</p>
-)
+import App from "../components/App";
+
+const Home = () => <App/>
+
 export default Home;
