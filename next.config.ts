@@ -1,7 +1,22 @@
-import type { NextConfig } from "next";
+// next.config.js
+const isGithubActions = process.env.GITHUB_ACTIONS || false
 
-const nextConfig: NextConfig = {
-  /* config options here */
-};
+let assetPrefix = '';
+let basePath = '';
 
-export default nextConfig;
+if (isGithubActions) {
+  // trim off `<repo-name>/` from repo url
+  const repo = process.env.GITHUB_REPOSITORY.replace(/.*?\//, '')
+  assetPrefix = `/${repo}/`
+  basePath = `/${repo}`
+}
+
+const nextConfig = {
+  assetPrefix: assetPrefix,
+  basePath: basePath,
+  images: {
+    unoptimized: true,
+  },
+}
+
+module.exports = nextConfig
