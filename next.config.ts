@@ -1,21 +1,9 @@
-const isGithubActions = process.env.GITHUB_ACTIONS === 'true';
-
-let assetPrefix = '';
-let basePath = '';
-
-if (isGithubActions) {
-  const repo = (process.env.GITHUB_REPOSITORY || '').replace(/.*?\//, '');
-  assetPrefix = `/${repo}/`;
-  basePath = `/${repo}`;
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  reactStrictMode: true,
+  assetPrefix: process.env.NODE_ENV === 'production' ? 'https://johnangusg.github.io' : '',
+  basePath: process.env.NODE_ENV === 'production' ? '/johnangusg.github.io' : '',
+  trailingSlash: true, // Needed for GitHub Pages
 }
 
-const nextConfig = {
-  assetPrefix: assetPrefix,
-  basePath: basePath,
-  images: {
-    unoptimized: true,
-  },
-  output: 'export',
-};
-
-module.exports = nextConfig;
+module.exports = nextConfig
