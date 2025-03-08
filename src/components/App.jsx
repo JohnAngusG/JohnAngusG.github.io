@@ -41,7 +41,7 @@ const App = () => (
             </figure>
             <div className="card-body">
                 <h2 className="card-title">Tetris</h2>
-                <p>Tetris written completely in C++ using SFML. Includes ability to see piece previews and instantly drop them.</p>
+                <p>A fully implemented Tetris game in C++ using SFML, featuring piece previews and the ability to instantly drop pieces.</p>
                 <div className="card-actions justify-end">
                     <a href="https://github.com/JohnAngusG/Tetris" target="_blank" className="btn btn-primary">Play Now</a>
                 </div>
