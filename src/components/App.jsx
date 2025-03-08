@@ -26,10 +26,10 @@ const App = () => (
             </figure>
             <div className="card-body">
                 <h2 className="card-title">DogPocalypse</h2>
-                <p>You play as lucky and hide from zombies while collecting food for your human.</p>
+                <p>You play as Lucky and hide from zombies while collecting food for your human.</p>
                 <div className="card-actions justify-end">
                     <a href="https://johnmullaney.tech/DogBuildWeb/" target="_blank" className="btn btn-primary">Play Now</a>
-                    {/* <button className="btn btn-secondary">Thoughts</button> */}
+                    <a href="https://github.com/JohnAngusG/Dogpocalypse/" target="_blank" className="btn btn-secondary">Thoughts</a>
                 </div>
             </div>
         </div>
@@ -44,7 +44,6 @@ const App = () => (
                 <p>Tetris written completely in C++ using SFML. Includes ability to see piece previews and instantly drop them.</p>
                 <div className="card-actions justify-end">
                     <a href="https://github.com/JohnAngusG/Tetris" target="_blank" className="btn btn-primary">Play Now</a>
-                    {/* <button className="btn btn-secondary">Thoughts</button> */}
                 </div>
             </div>
         </div>
